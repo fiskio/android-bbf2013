@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>  
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    		android:id="@+id/scroll"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		>
+<LinearLayout 
+    		android:id="@+id/info"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center"> 
+  
+    <ImageView 
+			android:id="@+id/color"
+			android:layout_width="fill_parent"
+			android:layout_height="30dip" 
+			android:layout_marginBottom="15dip"	
+			
+			/>		     				
+   
+     <TextView
+            android:id="@+id/beername"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dip"	
+            />
+    
+	<ImageView 
+			android:id="@+id/logo"
+			android:layout_width="100dip"
+			android:layout_height="100dip" 
+			android:layout_gravity="center_horizontal"
+		
+			/>		
+	  		      
+    <TextView
+            android:id="@+id/brewery"
+            style="@android:style/TextAppearance.Large"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+
+            />
+    
+    <TextView
+            android:id="@+id/type"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+
+            />
+    
+    <TextView
+            android:id="@+id/abv"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dip"	
+            android:layout_marginLeft="8dip"
+            />           
+ 
+     <TextView
+            android:id="@+id/description"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dip"	
+            android:layout_marginLeft="8dip"
+            />  
+            
+    		
+     <RadioGroup 
+    
+  		 android:layout_width="fill_parent"
+    	 android:layout_height="wrap_content"
+    	 android:orientation="horizontal"
+    	 android:checkedButton="@+id/radio_no"
+    	 android:layout_marginLeft="25dip"
+    	 android:layout_marginRight="30dip"
+    >
+    
+    <RadioButton android:id="@+id/radio_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no"
+        android:onClick="onRadioButtonClicked"
+        android:layout_weight="1"
+        />
+    <RadioButton android:id="@+id/radio_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yes"
+        android:onClick="onRadioButtonClicked"
+        android:layout_weight="1"
+        />
+     <RadioButton android:id="@+id/radio_wishlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wishlist"
+        android:onClick="onRadioButtonClicked"
+
+        />
+</RadioGroup>  
+ 
+     <RatingBar
+                android:id="@+id/ratingbar"
+                android:layout_marginBottom="20dip"	
+                android:layout_marginTop="20dip"	
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:stepSize="1.0" 
+                />
+     <LinearLayout 
+         android:orientation="horizontal"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"> 
+        
+          <ImageButton 
+            	android:id="@+id/record"
+            	android:layout_width="50dip"
+				android:layout_height="50dip" 
+			    android:layout_gravity="center_horizontal"
+                android:src="@drawable/record2"
+                android:scaleType="fitCenter"
+                android:padding="2dip"
+                android:layout_marginRight="10dip"
+               /> 
+           <ImageButton 
+            	android:id="@+id/speaker"
+            	android:layout_width="50dip"
+				android:layout_height="50dip" 
+			    android:layout_gravity="center_horizontal"
+                android:src="@drawable/speaker"
+                android:scaleType="fitCenter"
+                android:padding="2dip"
+                android:layout_marginLeft="10dip"
+               /> 
+                           
+           </LinearLayout>
+</LinearLayout>
+</ScrollView>

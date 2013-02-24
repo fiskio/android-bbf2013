@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/sort" android:title="Sort By">
+	<menu>
+		<item android:id="@+id/breweryItem" android:title="Brewery"></item>
+		<item android:id="@+id/beernameItem" android:title="Beer Name"></item>
+		<item android:id="@+id/styleItem" android:title="Style"></item>
+		<item android:id="@+id/colorItem" android:title="Color"></item>
+		<item android:id="@+id/abvItem" android:title="ABV"></item>
+  	 </menu></item>
+</menu>
