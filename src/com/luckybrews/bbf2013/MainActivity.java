@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
@@ -91,6 +94,12 @@ public class MainActivity extends Activity {
 
 	public void makeSpin(final boolean delete) {
 		
+		// check network
+		if (!isNetworkAvailable()) {
+			Toast.makeText(mContext, "Please check your wireless connection and try again.", Toast.LENGTH_SHORT).show();
+			return;
+		} 
+		
 		final ProgressDialog progress = new ProgressDialog(this);
         progress.setTitle("Downloading Database");
         progress.setMessage("Please wait...");
@@ -129,5 +138,12 @@ public class MainActivity extends Activity {
         }.start();
 
     }
+	
+	private boolean isNetworkAvailable() {
+		ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+		return activeNetworkInfo != null;
+	}	
+	
 
 }
